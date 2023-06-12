@@ -50,7 +50,7 @@ const Feed = () => {
 
     useEffect(() => {
         const fetchPosts = async () => {
-            const response = await fetch(`/api/prompt/${Math.random()}`, {
+            const response = await fetch(`/api/prompt/home/${Math.random()}`, {
                 headers: {
                     'Cache-Control': 'no-cache'
                 }
