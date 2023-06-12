@@ -1,5 +1,6 @@
 import Prompt from "@models/prompt"
 import { connectToDB } from "@utils/database"
+import mongoose from "mongoose"
 
 export const GET = async (req) => {
     try {
@@ -18,6 +19,7 @@ export const GET = async (req) => {
 
         return response
     } catch (err) {
+        console.log(err);
         return new Response("data fetching failed", { status: 500 })
     }
 }
