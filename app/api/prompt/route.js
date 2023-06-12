@@ -4,7 +4,7 @@ import { connectToDB } from "@utils/database"
 export const GET = async (req) => {
     try {
 
-        console.log("db call");
+        console.log(req);
         await connectToDB()
         console.log("after db call");
 
