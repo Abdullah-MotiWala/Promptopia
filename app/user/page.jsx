@@ -15,7 +15,6 @@ const UserProfile = () => {
         const fetchPosts = async () => {
             const response = await fetch(`/api/users/${userId}/posts`)
             const data = await response.json()
-            console.log(data)
             setUser({ name: data[0]?.creator.username })
             setPosts(data)
         }
