@@ -3,7 +3,10 @@ import { connectToDB } from "@utils/database"
 
 export const GET = async (req) => {
     try {
+
+        console.log("db call");
         await connectToDB()
+        console.log("after db call");
 
         const prompts = await Prompt.find({}).populate("creator")
         const response = new Response(JSON.stringify(prompts), { status: 200 })
